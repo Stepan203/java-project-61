@@ -1,65 +1,56 @@
-/*
+
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
-   /* public static int calc() {
-        int a;
-        int b;
-        void addition(int a, int b;) {
+    private static int b;
+    private static int a;
+        public static int add(int a, int b) {
             return a + b;
         }
-        int subtract; ( int a, int b;){
+        public static int sub(int a, int b){
+
             return a - b;
         }
-        int multiplication; ( int a, int b;){
+        public static int multi(int a, int b){
+
             return a * b;
         }
-*/
- /*   public static int calc() {
+    public static String calc() {
         Engine.hello();
+        Engine calcName = new Engine();
         System.out.println("What is the result of the expression?");
-            // Calc hello = new Calc();
-            //     return name;
-            //}
-            //String cliName = cli.name();
-
-            Scanner scanner = new Scanner(System.in);
-            Random r = new Random();
-            int min = 10;
-            int max = 100;
-            //int rnd = r.nextInt(max-min) + min;
-            //System.out.println(rnd);
-            var i = 0;
-            //System.out.println(cli_name.getClass());
-            while (i < 3) {
-                int rnd = r.nextInt(max - min) + min;
-                int addition;
-                System.out.println("Question: " + multiplication(a, b));
-                String otd = scanner.next();
-                if (otd.equals("134")) {
-                    System.out.println("Correct!");
-                    i += 1;
-                    //System.out.print("May I have your name? ");
-                    // String name = scanner.next();
-                } else {
-                    return "'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
-                            "Let's try again, " + Engine.name;
-                }
+        Scanner scanner = new Scanner(System.in);
+        Random r = new Random();
+        int[] arr = new int[2];
+        String[] myString = new String[]{" - ", " * ", " + "};
+        int min = 10;
+        int max = 100;
+        var i = 0;
+        var result = 0;
+        while (i < Engine.Col_round) {
+            int a = r.nextInt(max - min) + min;
+            int b = r.nextInt(max - min) + min;
+            System.out.println(Engine.Question + a + myString[i] + b);
+            if (myString[i] == " + ") {
+                result = add(a, b);
+            } else if (myString[i] == " - ") {
+                result = sub(a, b);
+            } else {
+                result = multi(a, b);
             }
-            // {
-            //   System.out.printf("no");
-            // }
-            //int b = Math.random();
-            //System.out.println(result);
-
-            return "Congratulations " + Engine.name + "!";
+            System.out.print(Engine.Ansver);
+            int otd = scanner.nextInt();
+            if (otd == result) {
+                System.out.println(Engine.Yes);
+                i += 1;
+            } else {
+                return otd + " is wrong answer ;(. Correct answer was " + result +"." +"\n" +
+                        "Let's try again, " + Engine.name;
+                 }
+                 }
+                return Engine.Cong + Engine.name + "!";
+            }
         }
-        private void name; () {
-        }
-    }
-}
-
-  */

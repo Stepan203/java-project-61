@@ -11,21 +11,21 @@ public class Even {
         int max = 100;
         var i = 0;
         Engine.hello();
-        Engine names = new Engine();
+       // Engine names = new Engine();
         //System.out.println(Engine.main());
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (i < 3) {
+        while (i < Engine.Col_round) {
             int rnd = r.nextInt(max-min) + min;
-            System.out.println("Question: " + rnd);
+            System.out.println(Engine.Question + rnd);
             String otd = scanner.next();
             if ((rnd % 2 == 0 & otd.equals("yes")) || (rnd % 2 != 0 & otd.equals("no"))) {
-                System.out.println("Correct!");
+                System.out.println(Engine.Yes);
                 i += 1;
             } else {
                 return "'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
-                        "Let's try again, " + names.getName();
+                        "Let's try again, " + Engine.name;
             }
         }
-        return "Congratulations " + names.getName() + "!";
+        return Engine.Cong + Engine.name + "!";
     }
 }

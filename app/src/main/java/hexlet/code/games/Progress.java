@@ -7,35 +7,20 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progress {
-    private static int[] rnd;
 
     public static int[] prgArr() {
-        int max = 6;
-        int min = 1;
+        int max = 10;
+        int min = 2;
         int[] arr = new int[10];
         Random rd = new Random();
         int step = rd.nextInt(max - min);
-        //Arrays.setAll(arr, i -> i + 1);
-        for (int i = 0; i < arr.length; i+=step) {
-            //for (int i: arr) {
-            arr[i] = i + 1;
-            //}
-            // for (int i = 0; i < arr.length; i++)
-            //{
-            //     System.out.print(arr[i] + " ");
+        int start = rd.nextInt(90 - 10);
+        arr[0] = start;
+        for (int i = 1; i < arr.length; i ++) {
+            arr[i] = arr[i - 1] + step;
         }
-        // arr[i] = (int) Math.round((Math.random() * 100));
-        //  System.out.print(arr);
-        // }
         return arr;
     }
-
-    public static int getRandom(int[] arr) {
-        int rnd = new Random().nextInt(arr.length);
-        //System.out.println(arr[rnd]);
-        return arr[rnd];
-    }
-
     public static String prg() {
         Engine.hello();
         Random r = new Random();
@@ -43,18 +28,19 @@ public class Progress {
         int max = 10;
         Scanner scanner = new Scanner(System.in);
         var i = 0;
+        int n1 = r.nextInt(10 - 2);
+
         while (i < Engine.Col_round) {
             StringBuilder stringBuilder = new StringBuilder();
-            int n1 = r.nextInt(max - min) + min;
-            var ind_n = prgArr()[n1];
-            System.out.println(Arrays.toString(prgArr()));
-          //  System.out.println(ind_n);
-            for (int j : prgArr()) {
-                if (j == ind_n) {
+            int[] arr_prg = prgArr();
+            var ind_n = arr_prg[n1];
+
+            for(int j = 0; j < arr_prg.length; j++) {
+                if (j == n1) {
                     stringBuilder.append(".. ");
                     continue;
                 }
-                stringBuilder.append(j).append(" ");
+                stringBuilder.append(arr_prg[j]).append(" ");
             }
             System.out.println(Engine.Question + stringBuilder);
             System.out.print(Engine.Ansver);
@@ -67,10 +53,8 @@ public class Progress {
                         "Let's try again, " + Engine.name;
             }
         }
-                //  System.out.println(res);
                 System.out.println("Find the greatest common divisor of given numbers.");
-            //}
-       // }
+
             return Engine.Cong + Engine.name + "!";
 
     }
