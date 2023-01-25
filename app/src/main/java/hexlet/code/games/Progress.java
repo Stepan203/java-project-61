@@ -5,9 +5,10 @@ import hexlet.code.Engine;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import static hexlet.code.Engine.NUMBER_OF_ROUND;
 
 public class Progress {
-
+    private static String description = "What number is missing in the progression?";
     public static int[] prgArr() {
         int max = 10;
         int min = 2;
@@ -21,42 +22,33 @@ public class Progress {
         }
         return arr;
     }
-    public static String prg() {
-        Engine.hello();
+    public static void runPrg() {
+        String[][] arrData = new String[NUMBER_OF_ROUND][2];
         Random r = new Random();
         int min = 1;
         int max = 10;
-        Scanner scanner = new Scanner(System.in);
         var i = 0;
-        int n1 = r.nextInt(10 - 2);
 
         while (i < Engine.Col_round) {
-            StringBuilder stringBuilder = new StringBuilder();
-            int[] arr_prg = prgArr();
-            var ind_n = arr_prg[n1];
+            for (int n = 0; n < arrData.length; n++) {
+                StringBuilder stringBuilder = new StringBuilder();
+                int n1 = r.nextInt(10 - 2);
+                int[] arr_prg = prgArr();
+                var ind_n = arr_prg[n1];
 
-            for(int j = 0; j < arr_prg.length; j++) {
-                if (j == n1) {
-                    stringBuilder.append(".. ");
-                    continue;
+                for (int j = 0; j < arr_prg.length; j++) {
+                    if (j == n1) {
+                        stringBuilder.append(".. ");
+                        continue;
+                    }
+                    stringBuilder.append(arr_prg[j]).append(" ");
+                    arrData[n][0] = String.valueOf(stringBuilder);
+                    arrData[n][1] = String.valueOf(ind_n);
+                    i += 1;
                 }
-                stringBuilder.append(arr_prg[j]).append(" ");
             }
-            System.out.println(Engine.Question + stringBuilder);
-            System.out.print(Engine.Ansver);
-            int otd = scanner.nextInt();
-            if (otd == ind_n) {
-                System.out.println(Engine.Yes);
-                i += 1;
-            } else {
-                return otd + " is wrong answer ;(. Correct answer was " + ind_n + "." + "\n" +
-                        "Let's try again, " + Engine.name;
-            }
+            Engine.start(description, arrData);
         }
-                System.out.println("Find the greatest common divisor of given numbers.");
-
-            return Engine.Cong + Engine.name + "!";
-
     }
 }
 

@@ -3,8 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
+import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Engine.start;
 
 public class Calc {
+    private static String description = "What is the result of the expression?";
     private static int b;
     private static int a;
         public static int add(int a, int b) {
@@ -18,11 +22,8 @@ public class Calc {
 
             return a * b;
         }
-    public static String calc() {
-        Engine.hello();
-        Engine calcName = new Engine();
-        System.out.println("What is the result of the expression?");
-        Scanner scanner = new Scanner(System.in);
+    public static void runCalc() {
+        String[][] arrData = new String[NUMBER_OF_ROUND][2];
         Random r = new Random();
         int[] arr = new int[2];
         String[] myString = new String[]{" - ", " * ", " + "};
@@ -31,26 +32,22 @@ public class Calc {
         var i = 0;
         var result = 0;
         while (i < Engine.Col_round) {
-            int a = r.nextInt(max - min) + min;
-            int b = r.nextInt(max - min) + min;
-            System.out.println(Engine.Question + a + myString[i] + b);
-            if (myString[i] == " + ") {
-                result = add(a, b);
-            } else if (myString[i] == " - ") {
-                result = sub(a, b);
-            } else {
-                result = multi(a, b);
-            }
-            System.out.print(Engine.Ansver);
-            int otd = scanner.nextInt();
-            if (otd == result) {
-                System.out.println(Engine.Yes);
+            for (int j = 0; j < arrData.length; j++) {
+                int a = r.nextInt(max - min) + min;
+                int b = r.nextInt(max - min) + min;
+                if (myString[i] == " + ") {
+                    result = add(a, b);
+                } else if (myString[i] == " - ") {
+                    result = sub(a, b);
+                } else {
+                    result = multi(a, b);
+                }
+                String question = a + myString[i] + b;
+                arrData[j][0] = String.valueOf(question);
+                arrData[j][1] = String.valueOf(result);
                 i += 1;
-            } else {
-                return otd + " is wrong answer ;(. Correct answer was " + result +"." +"\n" +
-                        "Let's try again, " + Engine.name;
-                 }
-                 }
-                return Engine.Cong + Engine.name + "!";
             }
         }
+        Engine.start(description, arrData);
+    }
+}

@@ -4,8 +4,12 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
-public class Gcd {
+import java.util.Arrays;
 
+import static hexlet.code.Engine.NUMBER_OF_ROUND;
+
+public class Gcd {
+    private static String description = "Find the greatest common divisor of given numbers.";
     private static int n1;
     private static int n2;
 
@@ -18,32 +22,22 @@ public class Gcd {
         }
         return gcd;
     }
-
-    public static String gcd() {
-        Engine.hello();
+    public static void runGcd() {
+        String[][] arrData = new String[NUMBER_OF_ROUND][2];
         Random r = new Random();
         int min = 10;
         int max = 100;
-        Scanner scanner = new Scanner(System.in);
         var i = 0;
         while (i < Engine.Col_round) {
-            int n1 = r.nextInt(max - min) + min;
-            int n2 = r.nextInt(max - min) + min;
-            System.out.println(Engine.Question + n1 + " " + n2);
-            System.out.print(Engine.Ansver);
-            int otd = scanner.nextInt();
-            if (otd == gcdByBruteForce(n1, n2)) {
-                System.out.println(Engine.Yes);
+            for (int j = 0; j < arrData.length; j++) {
+                int n1 = r.nextInt(max - min) + min;
+                int n2 = r.nextInt(max - min) + min;
+                String question = n1 + " " + n2;
+                arrData[j][0] = String.valueOf(question);
+                arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));
                 i += 1;
             }
-            else {
-                return otd + " is wrong answer ;(. Correct answer was " + gcdByBruteForce(n1, n2) +"." +"\n" +
-                        "Let's try again, " + Engine.name;
-            }
         }
-            System.out.println("Find the greatest common divisor of given numbers.");
-
-            return Engine.Cong + Engine.name + "!";
-
+        Engine.start(description, arrData);
     }
 }

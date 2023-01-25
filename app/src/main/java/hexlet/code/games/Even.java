@@ -2,30 +2,29 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
+import static hexlet.code.Engine.NUMBER_OF_ROUND;
 
 public class Even {
-    public static String even() {
-        Scanner scanner = new Scanner(System.in);
+    private static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static void runEven() {
+        String[][] arrData = new String[NUMBER_OF_ROUND][2];
+       // System.out.println(Engine.Start_Even);
         Random r = new Random();
         int min = 10;
         int max = 100;
         var i = 0;
-        Engine.hello();
-       // Engine names = new Engine();
-        //System.out.println(Engine.main());
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         while (i < Engine.Col_round) {
-            int rnd = r.nextInt(max-min) + min;
-            System.out.println(Engine.Question + rnd);
-            String otd = scanner.next();
-            if ((rnd % 2 == 0 & otd.equals("yes")) || (rnd % 2 != 0 & otd.equals("no"))) {
-                System.out.println(Engine.Yes);
-                i += 1;
-            } else {
-                return "'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
-                        "Let's try again, " + Engine.name;
+        for (int j = 0; j < arrData.length; j++) {
+            int rnd = r.nextInt(max - min) + min;
+            arrData[j][0] = String.valueOf(rnd);
+            arrData[j][1] = isEven(rnd) ? "yes": "no";
+            i += 1;
             }
         }
-        return Engine.Cong + Engine.name + "!";
+        Engine.start(description, arrData);
+    }
+    private static boolean isEven(int rnd) {
+        return rnd % 2 == 0;
     }
 }
