@@ -17,25 +17,20 @@ public class App {
 				"0 - Exit");
 		System.out.print(Engine.Ansver);
 		int nameInt = scanner.nextInt();
-		if (nameInt == 1) {
-				System.out.println(Engine.hello());
-		}
-		else if (nameInt == 2) {
-			System.out.println(Even.even());
-		} else if (nameInt == 3) {
-				System.out.println(Calc.calc());
-		}
-		else if (nameInt == 4) {
-			System.out.println(Gcd.gcd());
-		}
-		else if (nameInt == 5) {
-			System.out.println(Progress.prg());
-		} else if (nameInt == 6) {
-			System.out.println(Prime.prm());
-
+		switch(nameInt) {
+		case 1: System.out.println(Engine.hello());
+		    break;
+		case 2: Even.runEven();
+		    break;
+		case 3: Calc.runCalc();
+		    break;
+		case 4:	Gcd.runGcd();
+		    break;
+		case 5:	Progress.runPrg();
+		    break;
+		case 6: Prime.runPrm();
+		    break;
 		}
 	}
-	//}
-
 }
 
