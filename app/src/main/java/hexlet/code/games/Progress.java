@@ -28,14 +28,11 @@ public class Progress {
         int min = 1;
         int max = 10;
         var i = 0;
-
-        while (i < Engine.Col_round) {
             for (int n = 0; n < arrData.length; n++) {
                 StringBuilder stringBuilder = new StringBuilder();
                 int n1 = r.nextInt(10 - 2);
                 int[] arr_prg = prgArr();
                 var ind_n = arr_prg[n1];
-
                 for (int j = 0; j < arr_prg.length; j++) {
                     if (j == n1) {
                         stringBuilder.append(".. ");
@@ -48,7 +45,6 @@ public class Progress {
                 }
             }
             Engine.start(description, arrData);
-        }
     }
 }
 

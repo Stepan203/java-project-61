@@ -31,23 +31,21 @@ public class Calc {
         int max = 100;
         var i = 0;
         var result = 0;
-        while (i < Engine.Col_round) {
-            for (int j = 0; j < arrData.length; j++) {
-                int a = r.nextInt(max - min) + min;
-                int b = r.nextInt(max - min) + min;
-                if (myString[i] == " + ") {
-                    result = add(a, b);
-                } else if (myString[i] == " - ") {
-                    result = sub(a, b);
-                } else {
-                    result = multi(a, b);
-                }
-                String question = a + myString[i] + b;
-                arrData[j][0] = String.valueOf(question);
-                arrData[j][1] = String.valueOf(result);
-                i += 1;
+        for (int j = 0; j < arrData.length; j++) {
+            int a = r.nextInt(max - min) + min;
+            int b = r.nextInt(max - min) + min;
+            if (myString[i] == " + ") {
+                result = add(a, b);
+            } else if (myString[i] == " - ") {
+                result = sub(a, b);
+            } else {
+                result = multi(a, b);
             }
-        }
+            String question = a + myString[i] + b;
+            arrData[j][0] = String.valueOf(question);
+            arrData[j][1] = String.valueOf(result);
+            i += 1;
+            }
         Engine.start(description, arrData);
     }
 }

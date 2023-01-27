@@ -14,14 +14,12 @@ public class Even {
         int min = 10;
         int max = 100;
         var i = 0;
-        while (i < Engine.Col_round) {
         for (int j = 0; j < arrData.length; j++) {
             int rnd = r.nextInt(max - min) + min;
             arrData[j][0] = String.valueOf(rnd);
             arrData[j][1] = isEven(rnd) ? "yes": "no";
             i += 1;
             }
-        }
         Engine.start(description, arrData);
     }
     private static boolean isEven(int rnd) {

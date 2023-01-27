@@ -28,16 +28,14 @@ public class Gcd {
         int min = 10;
         int max = 100;
         var i = 0;
-        while (i < Engine.Col_round) {
-            for (int j = 0; j < arrData.length; j++) {
-                int n1 = r.nextInt(max - min) + min;
-                int n2 = r.nextInt(max - min) + min;
-                String question = n1 + " " + n2;
-                arrData[j][0] = String.valueOf(question);
-                arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));
-                i += 1;
+        for (int j = 0; j < arrData.length; j++) {
+            int n1 = r.nextInt(max - min) + min;
+            int n2 = r.nextInt(max - min) + min;
+            String question = n1 + " " + n2;
+            arrData[j][0] = String.valueOf(question);
+            arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));
+            i += 1;
             }
-        }
         Engine.start(description, arrData);
     }
 }

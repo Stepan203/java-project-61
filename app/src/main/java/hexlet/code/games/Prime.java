@@ -32,14 +32,12 @@ public class Prime {
         int min = 1;
         int max = 10;
         var i = 0;
-        while (i < Engine.Col_round) {
         for (int j = 0; j < arrData.length; j++) {
             int rndPrime = r.nextInt(100 - 2);
             arrData[j][0] = String.valueOf(rndPrime);
             arrData[j][1] = charPrime(rndPrime) ? "yes": "no";
             i += 1;
             }
-        }
         Engine.start(description, arrData);
 
     }
