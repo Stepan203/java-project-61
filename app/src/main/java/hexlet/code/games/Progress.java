@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 
 public class Progress {
-    private static String description = "What number is missing in the progression?";
+    private static String DESCRIPTION = "What number is missing in the progression?";
     public static int[] prgArr() {
         int max = 10;
         int min = 2;
@@ -24,27 +25,22 @@ public class Progress {
     }
     public static void runPrg() {
         String[][] arrData = new String[NUMBER_OF_ROUND][2];
-        Random r = new Random();
-        int min = 1;
-        int max = 10;
-        var i = 0;
-            for (int n = 0; n < arrData.length; n++) {
-                StringBuilder stringBuilder = new StringBuilder();
-                int n1 = r.nextInt(10 - 2);
-                int[] arr_prg = prgArr();
-                var ind_n = arr_prg[n1];
-                for (int j = 0; j < arr_prg.length; j++) {
-                    if (j == n1) {
-                        stringBuilder.append(".. ");
-                        continue;
-                    }
-                    stringBuilder.append(arr_prg[j]).append(" ");
-                    arrData[n][0] = String.valueOf(stringBuilder);
-                    arrData[n][1] = String.valueOf(ind_n);
-                    i += 1;
+        for (int n = 0; n < arrData.length; n++) {
+            StringBuilder stringBuilder = new StringBuilder();
+            int n1 = Utils.rnd(1, 10);
+            int[] arrPrg = prgArr();
+            var indN = arrPrg[n1];
+            for (int j = 0; j < arrPrg.length; j++) {
+                if (j == n1) {
+                    stringBuilder.append(".. ");
+                    continue;
                 }
+                    stringBuilder.append(arrPrg[j]).append(" ");
             }
-            Engine.start(description, arrData);
+                    arrData[n][0] = String.valueOf(stringBuilder);
+                    arrData[n][1] = String.valueOf(indN);
+        }
+            Engine.start(DESCRIPTION, arrData);
     }
 }
 
