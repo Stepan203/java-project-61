@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.*;
-
+import static hexlet.code.Engine.hello;
 import java.util.Scanner;
 
 public class App {
@@ -15,7 +15,7 @@ public class App {
 				"5 - Progression\n" +
 				"6 - Prime\n" +
 				"0 - Exit");
-		System.out.print(Engine.Ansver);
+		System.out.print(Engine.ANSWER);
 		int nameInt = scanner.nextInt();
 		switch(nameInt) {
 		case 1: System.out.println(Engine.hello());
