@@ -1,4 +1,5 @@
 package hexlet.code;
+
 import hexlet.code.games.Even;
 import hexlet.code.games.Prime;
 
@@ -23,12 +24,13 @@ public class Engine {
     public static String END_GAME2 = "Let's try again, ";
     public static String START_PRIME = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
-    public static String hello() {
+    public static void hello() {
         System.out.println(WELC);
         Scanner scanner = new Scanner(System.in);
         System.out.print(MAY_NAME);
         String name = scanner.next();
-        return Engine.HELLO + name + "!";
+        System.out.println(Engine.HELLO + name + "!");
+        //return Engine.HELLO + name + "!";
     }
 
     public static void start(String description, String[][] arrData) {
@@ -49,12 +51,11 @@ public class Engine {
             if (res.equals(answer)) {
                 System.out.println(Engine.YES);
                 j += 1;
-                }
-            else {
+            } else {
                 System.out.println(res + Engine.END_GAME1 + answer + "." + "\n" + Engine.END_GAME2 + name + "!");
                 return;
-                }
             }
+        }
         System.out.println(Engine.CONG + name + "!");
-            }
+    }
 }
