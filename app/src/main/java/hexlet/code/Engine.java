@@ -8,7 +8,7 @@ import java.util.Scanner;
 //import java.util.Arrays;
 
 public class Engine {
-    private static int Rounds = 3;
+    private static int roundCol = 3;
     public static int NumberOfRound = 3;
     public static String Welc = "Welcome to the Brain Games!";
     public static String MayName = "May I have your name? ";
@@ -42,7 +42,7 @@ public class Engine {
         System.out.println(description);
 
         var j = 0;
-        while (j < Engine.Rounds) {
+        while (j < Engine.roundCol) {
             String question = arrData[j][0];
             String answer = arrData[j][1];
             System.out.println(Engine.QUESTION + question);
