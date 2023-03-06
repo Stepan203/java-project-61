@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class App {
 
-    private static final int engineGame = 1;
-    private static final int evenGame = 2;
-    private static final int calcGames = 3;
-    private static final int gcdGame = 4;
-    private static final int progressionGame = 5;
-    private static final int primeGame = 6;
+    private static final int ENGINE = 1;
+    private static final int EVEN = 2;
+    private static final int CALC = 3;
+    private static final int GCD = 4;
+    private static final int PROGRESSION = 5;
+    private static final int PRIME = 6;
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -37,22 +37,22 @@ public class App {
         System.out.print(Engine.answers);
         int nameInt = scanner.nextInt();
         switch (nameInt) {
-            case engineGame:
+            case ENGINE:
                 Engine.hello();
                 break;
-            case evenGame:
+            case EVEN:
                 Even.runEven();
                 break;
-            case calcGames:
+            case CALC:
                 Calc.runCalc();
                 break;
-            case gcdGame:
+            case GCD:
                 Gcd.runGcd();
                 break;
-            case progressionGame:
+            case PROGRESSION:
                 Progress.runPrg();
                 break;
-            case primeGame:
+            case PRIME:
                 Prime.runPrm();
                 break;
             default:
