@@ -3,9 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import static hexlet.code.Engine.numberOfRound;
 

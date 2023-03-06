@@ -15,9 +15,9 @@ public class Engine {
     public static String hello = "Hello, ";
     public static String yes = "Correct!";
     public static String conf = "Congratulations, ";
-    public static String answer = "Your answer: ";
+    public static String answers = "Your answer: ";
     public static String choise = "Your choise: ";
-    public static String question = "Question: ";
+    public static String questions = "Question: ";
     public static String givenNumbers = "Find the greatest common divisor of given numbers.";
     public static String startCalc = "What is the result of the expression?";
     public static String endGame1 = " is wrong answer ;(. Correct answer was ";
@@ -45,14 +45,14 @@ public class Engine {
         while (j < Engine.roundCol) {
             String question = arrData[j][0];
             String answer = arrData[j][1];
-            System.out.println(Engine.question + question);
-            System.out.print(Engine.answer);
+            System.out.println(Engine.questions + question);
+            System.out.print(Engine.answers);
             String res = scanner.next();
             if (res.equals(answer)) {
                 System.out.println(Engine.yes);
                 j += 1;
             } else {
-                System.out.println(res + Engine.endGame1 + answer + "." + "\n" + Engine.endGame2 + name + "!");
+                System.out.println(res + Engine.endGame1 + answers + "." + "\n" + Engine.endGame2 + name + "!");
                 return;
             }
         }
