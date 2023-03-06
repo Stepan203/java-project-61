@@ -10,7 +10,7 @@ import hexlet.code.Utils;
 import static hexlet.code.Engine.numberOfRound;
 
 public class Gcd {
-    private static String DESCRIPTION = "Find the greatest common divisor of given numbers.";
+    private static String description = "Find the greatest common divisor of given numbers.";
 
     public static int gcdByBruteForce(int n1, int n2) {
         int gcd = 1;
@@ -30,6 +30,6 @@ public class Gcd {
             arrData[j][0] = String.valueOf(question);
             arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));
             }
-        Engine.start(DESCRIPTION, arrData);
+        Engine.start(description, arrData);
     }
 }

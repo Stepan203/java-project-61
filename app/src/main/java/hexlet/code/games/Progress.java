@@ -10,7 +10,7 @@ import java.util.Scanner;
 import static hexlet.code.Engine.numberOfRound;
 
 public class Progress {
-    private static String DESCRIPTION = "What number is missing in the progression?";
+    private static String description = "What number is missing in the progression?";
 
     public static int[] generateProgression() {
         int max = 10;
@@ -43,7 +43,7 @@ public class Progress {
             arrData[n][0] = String.valueOf(stringBuilder);
             arrData[n][1] = String.valueOf(indN);
         }
-        Engine.start(DESCRIPTION, arrData);
+        Engine.start(description, arrData);
     }
 }
 

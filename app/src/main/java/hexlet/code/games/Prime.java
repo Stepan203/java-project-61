@@ -10,7 +10,7 @@ import hexlet.code.Utils;
 import static hexlet.code.Engine.numberOfRound;
 
 public class Prime {
-    private static String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static boolean isPrime(int a) {
         if (a<= 1) {
             return false;
@@ -32,7 +32,7 @@ public class Prime {
             arrData[j][0] = String.valueOf(rndPrime);
             arrData[j][1] = isPrime(rndPrime) ? "yes": "no";
             }
-        Engine.start(DESCRIPTION, arrData);
+        Engine.start(description, arrData);
 
     }
 }

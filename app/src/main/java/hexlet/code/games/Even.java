@@ -8,7 +8,7 @@ import java.util.Arrays;
 import static hexlet.code.Engine.numberOfRound;
 
 public class Even {
-    private static String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void runEven() {
         String[][] arrData = new String[numberOfRound][2];
         var i = 0;
@@ -17,7 +17,7 @@ public class Even {
             arrData[j][0] = String.valueOf(rnd);
             arrData[j][1] = isEven(rnd) ? "yes": "no";
             }
-        Engine.start(DESCRIPTION, arrData);
+        Engine.start(description, arrData);
     }
     private static boolean isEven(int rnd) {
         return rnd % 2 == 0;
