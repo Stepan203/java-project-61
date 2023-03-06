@@ -45,6 +45,8 @@ public class App {
             case 6:
                 Prime.runPrm();
                 break;
+            default:
+                System.out.println("No number Game");
         }
     }
 }
