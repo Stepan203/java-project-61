@@ -18,7 +18,7 @@ public class Progress {
         int[] arr = new int[10];
         Random rd = new Random();
         int step = rd.nextInt(max - min);
-        int start = rd.nextInt(90 - 10);
+        int start = rd.nextInt(80);
         arr[0] = start;
         for (int i = 1; i < arr.length; i++) {
             arr[i] = arr[i - 1] + step;

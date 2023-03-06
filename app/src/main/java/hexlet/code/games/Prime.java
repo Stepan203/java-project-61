@@ -29,7 +29,7 @@ public class Prime {
     public static void runPrm() {
         String[][] arrData = new String[numberOfRound][2];
         for (int j = 0; j < arrData.length; j++) {
-            int rndPrime = Utils.rnd(2, 100);
+            int rndPrime = Utils.rnd(2, Engine.maxRand);
             arrData[j][0] = String.valueOf(rndPrime);
             arrData[j][1] = isPrime(rndPrime) ? "yes" : "no";
         }

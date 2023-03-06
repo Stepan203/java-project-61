@@ -8,7 +8,7 @@ import java.util.Scanner;
 //import java.util.Arrays;
 
 public class Engine {
-    public static int roundCol = 3;
+   // public static int roundCol = 3;
     public static int numberOfRound = 3;
     public static String welc = "Welcome to the Brain Games!";
     public static String mayName = "May I have your name? ";
@@ -24,9 +24,9 @@ public class Engine {
     public static String endGame2 = "Let's try again, ";
     public static String startPrime = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
-    public static int calcGame = 3;
-    public static int minRand = 10;
-    public static int maxRand = 100;
+    public static final int calcGame = 3;
+    public static final int minRand = 10;
+    public static final int maxRand = 100;
 
     public static void hello() {
         System.out.println(welc);
@@ -46,7 +46,7 @@ public class Engine {
         System.out.println(description);
 
         var j = 0;
-        while (j < Engine.roundCol) {
+        while (j < Engine.numberOfRound) {
             String question = arrData[j][0];
             String answer = arrData[j][1];
             System.out.println(Engine.questions + question);
