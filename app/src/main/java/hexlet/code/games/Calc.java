@@ -32,10 +32,12 @@ public class Calc {
         String[][] arrData = new String[numberOfRound][2];
         Random r = new Random();
         int[] arr = new int[2];
+        int minRand = 10;
+        int maxRand = 100;
         var result = 0;
         for (int j = 0; j < arrData.length; j++) {
-            int num1 = Utils.rnd(10, 100);
-            int num2 = Utils.rnd(10, 100);
+            int num1 = Utils.rnd(minRand, maxRand);
+            int num2 = Utils.rnd(minRand, maxRand);
             int ind = r.nextInt(operators.length);
             switch (ind) {
                 case 0:

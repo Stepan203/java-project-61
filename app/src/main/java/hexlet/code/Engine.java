@@ -24,6 +24,8 @@ public class Engine {
     public static String endGame2 = "Let's try again, ";
     public static String startPrime = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
+    public static int calcGame = 3;
+
     public static void hello() {
         System.out.println(welc);
         Scanner scanner = new Scanner(System.in);
