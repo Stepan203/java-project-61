@@ -7,6 +7,8 @@ import hexlet.code.Utils;
 //import java.util.Scanner;
 //import java.util.Arrays;
 import static hexlet.code.Engine.numberOfRound;
+import static hexlet.code.Engine.maxRand;
+import static hexlet.code.Engine.minRand;
 
 public class Even {
     private static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -15,7 +17,7 @@ public class Even {
         String[][] arrData = new String[numberOfRound][2];
         var i = 0;
         for (int j = 0; j < arrData.length; j++) {
-            int rnd = Utils.rnd(10, 100);
+            int rnd = Utils.rnd(minRand, maxRand);
             arrData[j][0] = String.valueOf(rnd);
             arrData[j][1] = isEven(rnd) ? "yes" : "no";
         }

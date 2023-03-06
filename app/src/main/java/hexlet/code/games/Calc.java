@@ -7,7 +7,8 @@ import java.util.Random;
 //import java.util.Scanner;
 //import java.util.Arrays;
 import static hexlet.code.Engine.numberOfRound;
-//import static hexlet.code.Engine.startCalc;
+import static hexlet.code.Engine.minRand;
+import static hexlet.code.Engine.maxRand;
 import hexlet.code.Utils;
 
 //import java.lang.reflect.Method;
@@ -32,8 +33,6 @@ public class Calc {
         String[][] arrData = new String[numberOfRound][2];
         Random r = new Random();
         int[] arr = new int[2];
-        int minRand = 10;
-        int maxRand = 100;
         var result = 0;
         for (int j = 0; j < arrData.length; j++) {
             int num1 = Utils.rnd(minRand, maxRand);

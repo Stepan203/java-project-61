@@ -8,6 +8,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 import static hexlet.code.Engine.numberOfRound;
+import static hexlet.code.Engine.maxRand;
+import static hexlet.code.Engine.minRand;
 
 public class Gcd {
     private static String description = "Find the greatest common divisor of given numbers.";
@@ -24,8 +26,8 @@ public class Gcd {
     public static void runGcd() {
         String[][] arrData = new String[numberOfRound][2];
         for (int j = 0; j < arrData.length; j++) {
-            int n1 = Utils.rnd(10, 100);
-            int n2 = Utils.rnd(10, 100);
+            int n1 = Utils.rnd(minRand, maxRand);
+            int n2 = Utils.rnd(minRand, maxRand);
             String question = n1 + " " + n2;
             arrData[j][0] = String.valueOf(question);
             arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));

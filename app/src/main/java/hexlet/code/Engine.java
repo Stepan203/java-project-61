@@ -25,6 +25,8 @@ public class Engine {
     public static String startPrime = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
     public static int calcGame = 3;
+    public static int minRand = 10;
+    public static int maxRand = 100;
 
     public static void hello() {
         System.out.println(welc);
