@@ -9,6 +9,7 @@ import java.util.Random;
 
 import static hexlet.code.Engine.CALCGAME;
 import static hexlet.code.Engine.MINRAND;
+import static hexlet.code.Engine.MAXRAND;
 
 public class Progress {
     private static String description = "What number is missing in the progression?";
@@ -19,7 +20,7 @@ public class Progress {
         int[] arr = new int[MINRAND];
         Random rd = new Random();
         int step = rd.nextInt(MINRAND - 2);
-        int start = rd.nextInt(80);
+        int start = rd.nextInt(MAXRAND - MINRAND - MINRAND);
         arr[0] = start;
         for (int i = 1; i < arr.length; i++) {
             arr[i] = arr[i - 1] + step;
@@ -31,7 +32,7 @@ public class Progress {
         String[][] arrData = new String[CALCGAME][2];
         for (int n = 0; n < arrData.length; n++) {
             StringBuilder stringBuilder = new StringBuilder();
-            int n1 = Utils.rnd(1, 10);
+            int n1 = Utils.rnd(1, MINRAND);
             int[] arrPrg = generateProgression();
             var indN = arrPrg[n1];
             for (int j = 0; j < arrPrg.length; j++) {
