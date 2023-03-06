@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.NumberOfRound;
+import static hexlet.code.Engine.numberOfRound;
 
 public class Gcd {
     private static String DESCRIPTION = "Find the greatest common divisor of given numbers.";
@@ -22,7 +22,7 @@ public class Gcd {
         return gcd;
     }
     public static void runGcd() {
-        String[][] arrData = new String[NumberOfRound][2];
+        String[][] arrData = new String[numberOfRound][2];
         for (int j = 0; j < arrData.length; j++) {
             int n1 = Utils.rnd(10, 100);
             int n2 = Utils.rnd(10, 100);

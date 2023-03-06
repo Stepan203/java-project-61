@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
-import static hexlet.code.Engine.NumberOfRound;
+import static hexlet.code.Engine.numberOfRound;
 import static hexlet.code.Engine.START_CALC;
 import hexlet.code.Utils;
 
@@ -24,7 +24,7 @@ public class Calc {
         return num1 * num2;
     }
     public static void runCalc() {
-        String[][] arrData = new String[NumberOfRound][2];
+        String[][] arrData = new String[numberOfRound][2];
         Random r = new Random();
         int[] arr = new int[2];
         var result = 0;

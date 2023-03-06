@@ -22,7 +22,7 @@ public class App {
                 "6 - Prime\n"
                 +
                 "0 - Exit");
-        System.out.print(Engine.ANSWER);
+        System.out.print(Engine.answer);
         int nameInt = scanner.nextInt();
         switch (nameInt) {
             case 1:

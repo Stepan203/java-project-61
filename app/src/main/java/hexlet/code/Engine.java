@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class Engine {
     private static int roundCol = 3;
-    public static int NumberOfRound = 3;
-    public static String Welc = "Welcome to the Brain Games!";
-    public static String MayName = "May I have your name? ";
-    public static String Hello = "Hello, ";
-    public static String YES = "Correct!";
-    public static String CONG = "Congratulations, ";
-    public static String ANSWER = "Your answer: ";
-    public static String CHOISE = "Your choise: ";
+    public static int numberOfRound = 3;
+    public static String welc = "Welcome to the Brain Games!";
+    public static String mayName = "May I have your name? ";
+    public static String hello = "Hello, ";
+    public static String yes = "Correct!";
+    public static String conf = "Congratulations, ";
+    public static String answer = "Your answer: ";
+    public static String choise = "Your choise: ";
     public static String QUESTION = "Question: ";
     public static String GIVEN_NUMBERS = "Find the greatest common divisor of given numbers.";
     public static String START_CALC = "What is the result of the expression?";
@@ -25,20 +25,20 @@ public class Engine {
     public static String START_PRIME = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
     public static void hello() {
-        System.out.println(Welc);
+        System.out.println(welc);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(MayName);
+        System.out.print(mayName);
         String name = scanner.next();
-        System.out.println(Engine.Hello + name + "!");
+        System.out.println(Engine.hello + name + "!");
         //return Engine.HELLO + name + "!";
     }
 
     public static void start(String description, String[][] arrData) {
-        System.out.println(Welc);
+        System.out.println(welc);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(MayName);
+        System.out.print(mayName);
         String name = scanner.next();
-        System.out.println(Engine.Hello + name + "!");
+        System.out.println(Engine.hello + name + "!");
         System.out.println(description);
 
         var j = 0;
@@ -46,16 +46,16 @@ public class Engine {
             String question = arrData[j][0];
             String answer = arrData[j][1];
             System.out.println(Engine.QUESTION + question);
-            System.out.print(Engine.ANSWER);
+            System.out.print(Engine.answer);
             String res = scanner.next();
             if (res.equals(answer)) {
-                System.out.println(Engine.YES);
+                System.out.println(Engine.yes);
                 j += 1;
             } else {
                 System.out.println(res + Engine.END_GAME1 + answer + "." + "\n" + Engine.END_GAME2 + name + "!");
                 return;
             }
         }
-        System.out.println(Engine.CONG + name + "!");
+        System.out.println(Engine.conf + name + "!");
     }
 }
