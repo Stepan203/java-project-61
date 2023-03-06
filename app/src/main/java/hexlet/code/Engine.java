@@ -1,18 +1,18 @@
 package hexlet.code;
 
-import hexlet.code.games.Even;
-import hexlet.code.games.Prime;
+//import hexlet.code.games.Even;
+//import hexlet.code.games.Prime;
 
-import java.util.Random;
+//import java.util.Random;
 import java.util.Scanner;
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class Engine {
-    public static int COL_ROUND = 3;
-    public static int NUMBER_OF_ROUND = 3;
-    public static String WELC = "Welcome to the Brain Games!";
-    public static String MAY_NAME = "May I have your name? ";
-    public static String HELLO = "Hello, ";
+    public static int ColRound = 3;
+    public static int NunberOfRound = 3;
+    public static String Welc = "Welcome to the Brain Games!";
+    public static String MayName = "May I have your name? ";
+    public static String Hello = "Hello, ";
     public static String YES = "Correct!";
     public static String CONG = "Congratulations, ";
     public static String ANSWER = "Your answer: ";
