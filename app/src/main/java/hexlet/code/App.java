@@ -34,7 +34,7 @@ public class App {
                 "6 - Prime\n"
                 +
                 "0 - Exit");
-        System.out.print(Engine.answers);
+        System.out.print(Engine.ANSWERS);
         int nameInt = scanner.nextInt();
         switch (nameInt) {
             case ENGINE:

@@ -1,65 +1,58 @@
 package hexlet.code;
 
-//import hexlet.code.games.Even;
-//import hexlet.code.games.Prime;
-
-//import java.util.Random;
 import java.util.Scanner;
-//import java.util.Arrays;
 
 public class Engine {
-   // public static int roundCol = 3;
-    public static int numberOfRound = 3;
-    public static String welc = "Welcome to the Brain Games!";
-    public static String mayName = "May I have your name? ";
-    public static String hello = "Hello, ";
-    public static String yes = "Correct!";
-    public static String conf = "Congratulations, ";
-    public static String answers = "Your answer: ";
-    public static String choise = "Your choise: ";
-    public static String questions = "Question: ";
-    public static String givenNumbers = "Find the greatest common divisor of given numbers.";
-    public static String startCalc = "What is the result of the expression?";
-    public static String endGame1 = " is wrong answer ;(. Correct answer was ";
-    public static String endGame2 = "Let's try again, ";
-    public static String startPrime = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
-    public static final int calcGame = 3;
-    public static final int minRand = 10;
-    public static final int maxRand = 100;
+    public static final String WELCOME = "Welcome to the Brain Games!";
+    public static final String MAYNAME = "May I have your name? ";
+    public static final String HELLO = "Hello, ";
+    public static final String YES = "Correct!";
+    public static final String CONFGRATULATIONS = "Congratulations, ";
+    public static final String ANSWERS = "Your answer: ";
+    public static final String CHOISE = "Your choise: ";
+    public static final String QUESTIONS = "Question: ";
+    public static final String GIVEMNUMBERS = "Find the greatest common divisor of given numbers.";
+    public static final String STARTCALC = "What is the result of the expression?";
+    public static final String ENDGAME1 = " is wrong answer ;(. Correct answer was ";
+    public static final String ENDGAME2 = "Let's try again, ";
+    public static final String STARTPRIME = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+
+    public static final int CALCGAME = 3;
+    public static final int MINRAND = 10;
+    public static final int MAXRAND = 100;
 
     public static void hello() {
-        System.out.println(welc);
+        System.out.println(WELCOME);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(mayName);
+        System.out.print(MAYNAME);
         String name = scanner.next();
-        System.out.println(Engine.hello + name + "!");
-        //return Engine.HELLO + name + "!";
+        System.out.println(Engine.HELLO + name + "!");
     }
 
     public static void start(String description, String[][] arrData) {
-        System.out.println(welc);
+        System.out.println(WELCOME);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(mayName);
+        System.out.print(MAYNAME);
         String name = scanner.next();
-        System.out.println(Engine.hello + name + "!");
+        System.out.println(Engine.HELLO + name + "!");
         System.out.println(description);
 
         var j = 0;
-        while (j < Engine.numberOfRound) {
+        while (j < Engine.CALCGAME) {
             String question = arrData[j][0];
             String answer = arrData[j][1];
-            System.out.println(Engine.questions + question);
-            System.out.print(Engine.answers);
+            System.out.println(Engine.QUESTIONS + question);
+            System.out.print(Engine.ANSWERS);
             String res = scanner.next();
             if (res.equals(answer)) {
-                System.out.println(Engine.yes);
+                System.out.println(Engine.YES);
                 j += 1;
             } else {
-                System.out.println(res + Engine.endGame1 + answers + "." + "\n" + Engine.endGame2 + name + "!");
+                System.out.println(res + Engine.ENDGAME1 + ANSWERS + "." + "\n" + Engine.ENDGAME2 + name + "!");
                 return;
             }
         }
-        System.out.println(Engine.conf + name + "!");
+        System.out.println(Engine.CONFGRATULATIONS + name + "!");
     }
 }

@@ -2,14 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-//import java.util.Random;
-//import java.util.Scanner;
-//import java.util.Arrays;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.numberOfRound;
-import static hexlet.code.Engine.maxRand;
-import static hexlet.code.Engine.minRand;
+import static hexlet.code.Engine.CALCGAME;
+import static hexlet.code.Engine.MINRAND;
+import static hexlet.code.Engine.MAXRAND;
 
 public class Gcd {
     private static String description = "Find the greatest common divisor of given numbers.";
@@ -24,10 +21,10 @@ public class Gcd {
         return gcd;
     }
     public static void runGcd() {
-        String[][] arrData = new String[numberOfRound][2];
+        String[][] arrData = new String[CALCGAME][2];
         for (int j = 0; j < arrData.length; j++) {
-            int n1 = Utils.rnd(minRand, maxRand);
-            int n2 = Utils.rnd(minRand, maxRand);
+            int n1 = Utils.rnd(MINRAND, MAXRAND);
+            int n2 = Utils.rnd(MINRAND, MAXRAND);
             String question = n1 + " " + n2;
             arrData[j][0] = String.valueOf(question);
             arrData[j][1] = String.valueOf(gcdByBruteForce(n1, n2));

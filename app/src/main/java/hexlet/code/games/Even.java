@@ -3,21 +3,18 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-//import java.util.Random;
-//import java.util.Scanner;
-//import java.util.Arrays;
-import static hexlet.code.Engine.numberOfRound;
-import static hexlet.code.Engine.maxRand;
-import static hexlet.code.Engine.minRand;
+import static hexlet.code.Engine.CALCGAME;
+import static hexlet.code.Engine.MINRAND;
+import static hexlet.code.Engine.MAXRAND;
 
 public class Even {
     private static String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void runEven() {
-        String[][] arrData = new String[numberOfRound][2];
+        String[][] arrData = new String[CALCGAME][2];
         var i = 0;
         for (int j = 0; j < arrData.length; j++) {
-            int rnd = Utils.rnd(minRand, maxRand);
+            int rnd = Utils.rnd(MINRAND, MAXRAND);
             arrData[j][0] = String.valueOf(rnd);
             arrData[j][1] = isEven(rnd) ? "yes" : "no";
         }

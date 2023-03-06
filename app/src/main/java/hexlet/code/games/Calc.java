@@ -4,14 +4,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import java.util.Random;
-//import java.util.Scanner;
-//import java.util.Arrays;
-import static hexlet.code.Engine.numberOfRound;
-import static hexlet.code.Engine.minRand;
-import static hexlet.code.Engine.maxRand;
-import hexlet.code.Utils;
 
-//import java.lang.reflect.Method;
+import static hexlet.code.Engine.CALCGAME;
+import static hexlet.code.Engine.MINRAND;
+import static hexlet.code.Engine.MAXRAND;
+
+import hexlet.code.Utils;
 
 public class Calc {
     private static String description = "What is the result of the expression?";
@@ -30,13 +28,13 @@ public class Calc {
     }
 
     public static void runCalc() {
-        String[][] arrData = new String[numberOfRound][2];
+        String[][] arrData = new String[CALCGAME][2];
         Random r = new Random();
         int[] arr = new int[2];
         var result = 0;
         for (int j = 0; j < arrData.length; j++) {
-            int num1 = Utils.rnd(minRand, maxRand);
-            int num2 = Utils.rnd(minRand, maxRand);
+            int num1 = Utils.rnd(MINRAND, MAXRAND);
+            int num2 = Utils.rnd(MINRAND, MAXRAND);
             int ind = r.nextInt(operators.length);
             switch (ind) {
                 case 0:

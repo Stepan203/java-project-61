@@ -7,17 +7,18 @@ import hexlet.code.Utils;
 import java.util.Random;
 //import java.util.Scanner;
 
-import static hexlet.code.Engine.numberOfRound;
+import static hexlet.code.Engine.CALCGAME;
+import static hexlet.code.Engine.MINRAND;
 
 public class Progress {
     private static String description = "What number is missing in the progression?";
 
     public static int[] generateProgression() {
-        int max = 10;
-        int min = 2;
-        int[] arr = new int[10];
+       // int max = 10;
+      //  int min = 2;
+        int[] arr = new int[MINRAND];
         Random rd = new Random();
-        int step = rd.nextInt(max - min);
+        int step = rd.nextInt(MINRAND - 2);
         int start = rd.nextInt(80);
         arr[0] = start;
         for (int i = 1; i < arr.length; i++) {
@@ -27,7 +28,7 @@ public class Progress {
     }
 
     public static void runPrg() {
-        String[][] arrData = new String[numberOfRound][2];
+        String[][] arrData = new String[CALCGAME][2];
         for (int n = 0; n < arrData.length; n++) {
             StringBuilder stringBuilder = new StringBuilder();
             int n1 = Utils.rnd(1, 10);

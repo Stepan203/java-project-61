@@ -2,12 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-//import java.util.Random;
-//import java.util.Scanner;
-//import java.util.Arrays;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.numberOfRound;
+import static hexlet.code.Engine.CALCGAME;
+import static hexlet.code.Engine.MAXRAND;
 
 public class Prime {
     private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -27,9 +25,9 @@ public class Prime {
     }
 
     public static void runPrm() {
-        String[][] arrData = new String[numberOfRound][2];
+        String[][] arrData = new String[CALCGAME][2];
         for (int j = 0; j < arrData.length; j++) {
-            int rndPrime = Utils.rnd(2, Engine.maxRand);
+            int rndPrime = Utils.rnd(2, MAXRAND);
             arrData[j][0] = String.valueOf(rndPrime);
             arrData[j][1] = isPrime(rndPrime) ? "yes" : "no";
         }
