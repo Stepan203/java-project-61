@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Engine.NumberOfRound;
 
 public class Progress {
     private static String DESCRIPTION = "What number is missing in the progression?";
@@ -27,7 +27,7 @@ public class Progress {
     }
 
     public static void runPrg() {
-        String[][] arrData = new String[NUMBER_OF_ROUND][2];
+        String[][] arrData = new String[NumberOfRound][2];
         for (int n = 0; n < arrData.length; n++) {
             StringBuilder stringBuilder = new StringBuilder();
             int n1 = Utils.rnd(1, 10);

@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Engine.NumberOfRound;
 
 public class Prime {
     private static String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -26,7 +26,7 @@ public class Prime {
         return false;
     }
     public static void runPrm() {
-        String[][] arrData = new String[NUMBER_OF_ROUND][2];
+        String[][] arrData = new String[NumberOfRound][2];
         for (int j = 0; j < arrData.length; j++) {
             int rndPrime = Utils.rnd(2, 100);
             arrData[j][0] = String.valueOf(rndPrime);

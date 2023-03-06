@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static int ColRound = 3;
-    public static int NunberOfRound = 3;
+    public static int NumberOfRound = 3;
     public static String Welc = "Welcome to the Brain Games!";
     public static String MayName = "May I have your name? ";
     public static String Hello = "Hello, ";
@@ -25,24 +25,24 @@ public class Engine {
     public static String START_PRIME = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
     public static void hello() {
-        System.out.println(WELC);
+        System.out.println(Welc);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(MAY_NAME);
+        System.out.print(MayName);
         String name = scanner.next();
-        System.out.println(Engine.HELLO + name + "!");
+        System.out.println(Engine.Hello + name + "!");
         //return Engine.HELLO + name + "!";
     }
 
     public static void start(String description, String[][] arrData) {
-        System.out.println(WELC);
+        System.out.println(Welc);
         Scanner scanner = new Scanner(System.in);
-        System.out.print(MAY_NAME);
+        System.out.print(MayName);
         String name = scanner.next();
-        System.out.println(Engine.HELLO + name + "!");
+        System.out.println(Engine.Hello + name + "!");
         System.out.println(description);
 
         var j = 0;
-        while (j < Engine.COL_ROUND) {
+        while (j < Engine.ColRound) {
             String question = arrData[j][0];
             String answer = arrData[j][1];
             System.out.println(Engine.QUESTION + question);

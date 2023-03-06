@@ -5,12 +5,12 @@ import hexlet.code.Utils;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
-import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Engine.NumberOfRound;
 
 public class Even {
     private static String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void runEven() {
-        String[][] arrData = new String[NUMBER_OF_ROUND][2];
+        String[][] arrData = new String[NumberOfRound][2];
         var i = 0;
         for (int j = 0; j < arrData.length; j++) {
             int rnd = Utils.rnd(10, 100);

@@ -2,8 +2,6 @@ package hexlet.code;
 
 import hexlet.code.games.*;
 
-//import static hexlet.code.Engine.hello;
-
 import java.util.Scanner;
 
 public class App {
