@@ -12,11 +12,10 @@ public class Engine {
     public static final String ANSWERS = "Your answer: ";
     public static final String CHOISE = "Your choise: ";
     public static final String QUESTIONS = "Question: ";
-    public static final String GIVEMNUMBERS = "Find the greatest common divisor of given numbers.";
+
     public static final String STARTCALC = "What is the result of the expression?";
     public static final String ENDGAME1 = " is wrong answer ;(. Correct answer was ";
     public static final String ENDGAME2 = "Let's try again, ";
-    public static final String STARTPRIME = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
 
     public static final int CALCGAME = 3;
     public static final int MINRAND = 10;
@@ -49,7 +48,7 @@ public class Engine {
                 System.out.println(Engine.YES);
                 j += 1;
             } else {
-                System.out.println(res + Engine.ENDGAME1 + ANSWERS + "." + "\n" + Engine.ENDGAME2 + name + "!");
+                System.out.println(res + Engine.ENDGAME1 + answer + "." + "\n" + Engine.ENDGAME2 + name + "!");
                 return;
             }
         }

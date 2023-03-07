@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class App {
 
-    private static final int ENGINE = 1;
+    private static final int GREET = 1;
     private static final int EVEN = 2;
     private static final int CALC = 3;
     private static final int GCD = 4;
@@ -37,7 +37,7 @@ public class App {
         System.out.print(Engine.ANSWERS);
         int nameInt = scanner.nextInt();
         switch (nameInt) {
-            case ENGINE:
+            case GREET:
                 Engine.hello();
                 break;
             case EVEN:
